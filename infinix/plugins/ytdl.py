@@ -230,7 +230,7 @@ async def download_video(event):
 
           event.chat_id,
 
-          f"{ytdl_data['id']}.mp3",
+          f"{ytdl_data['id']}.mp3.mp3",
 
           supports_streaming=True,
 
@@ -260,6 +260,6 @@ async def download_video(event):
 
       )
 
-      os.remove(f"{ytdl_data['id']}.mp3")      
+      os.remove(f"{ytdl_data['id']}.mp3.mp3")      
 
         
