@@ -20,7 +20,6 @@ from yt_dlp.utils import (
 
 @bot.on(events.NewMessage(incoming=True, pattern="/yt ?(.*)"))
 
-
 async def download_video(event):
   url = None
   t_type = None
@@ -28,7 +27,6 @@ async def download_video(event):
   rl = typee.split(" ")
   url = rl[1]
   type = rl[0]
-  
   
   await event.reply(url)
   vtx = await event.reply("`Preparing to download...`")
@@ -107,8 +105,7 @@ async def download_video(event):
   except Exception as e:
       await vtx.edit(f"{str(type(e)): {str(e)}}")
       return
-  
-      
+ 
   c_time = time.time()
   if song:
       await vtx.edit(
@@ -159,17 +156,6 @@ async def download_video(event):
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 async def progress(current, total, event, start, type_of_ps, file_name=None):
     """Generic progress_callback for uploads and downloads."""
     now = time.time()
@@ -195,7 +181,6 @@ async def progress(current, total, event, start, type_of_ps, file_name=None):
         else:
             await event.edit("{}\n{}".format(type_of_ps, tmp))
 
-
 def humanbytes(size):
     """Input size in bytes,
     outputs in a human readable format"""
@@ -210,7 +195,6 @@ def humanbytes(size):
         size /= power
         raised_to_pow += 1
     return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
-
 
 def time_formatter(milliseconds: int) -> str:
     """Inputs time in milliseconds, to get beautified time,
