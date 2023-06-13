@@ -3,7 +3,6 @@ import logging
 import time
 
 
-openai_key = "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"
 
 api_id = "1125689"
 api_hash = "4772d1792ed194020a8fb06a91ffb8fa"
