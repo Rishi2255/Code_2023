@@ -1,9 +1,8 @@
-from .. import bot,openai_key
+from .. import bot
 from telethon import events
 import asyncio
-import openai
 
-openai.my_api_key = openai_key
+
 
 
 
@@ -25,7 +24,7 @@ async def start(event):
 async def start(event):
   await  event.reply("Hello this is hello command")
  
-@bot.on(events.NewMessage(incoming= True,pattern="/Happy"))
+@bot.on(events.NewMessage(incoming= True,pattern="/star"))
 async def start(event):
   a = await  event.reply("Hello 🦋")
   await asyncio.sleep(2)
